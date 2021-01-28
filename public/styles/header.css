@@ -1,0 +1,20 @@
+header {
+    height : 500px;
+    width : 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #c25b00;
+    background-image: url("https://www.transparenttextures.com/patterns/elegant-grid.png");
+    padding-top: 1em; 
+} 
+
+h2{
+    margin-top: 0;
+}
+
+.light{
+    font-weight: lighter;
+    font-family: 'Source Sans Pro', sans-serif;
+}
