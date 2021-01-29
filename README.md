@@ -15,3 +15,5 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+## Screenshots
+![Alt text](https://github.com/shivaniuppal21/tweeter/blob/master/public/images/Screenshot%20from%202021-01-28%2022-48-29.png?raw=true )
