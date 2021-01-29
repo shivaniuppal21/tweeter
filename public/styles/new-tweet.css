@@ -37,8 +37,6 @@ counter{
     color: red;
   }
   
-  
-
 textarea{
     border-bottom: 5px solid black;
     font-size: 15px;
@@ -47,5 +45,17 @@ textarea{
     border-left: none;
     background-color: #F4F1EC;
    }
-
+ .errorMsg{
+    color: red;
+    border: 5px solid red;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    padding: 10px; 
+  }
+  #error-icon{
+    color:red;
+    font-size: 30px;
+  }
 

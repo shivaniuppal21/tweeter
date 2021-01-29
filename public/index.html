@@ -28,7 +28,7 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav id="nav">
       <span>tweeter</span>
     </nav>
     <header>
@@ -37,7 +37,7 @@
       </div>
       <br>
       <div>
-          <h2>Shivani <span class="light">Uppal</h2>
+          <h2>Shivani <span class="light1">Uppal</h2>
       </div>
   </header>  
 
@@ -51,7 +51,9 @@
 
       <form class = "form" id = "tweet-form" action="/tweets/" method="POST">
         <p class="errorMsg">
+          <i id="error-icon"class="fas fa-exclamation-circle"></i>
           <span class="error-text"></span>
+          <i id="error-icon"class="fas fa-exclamation-circle"></i>
         </p>
         <label class="label"for="tweet-text">What are you humming about?</label>
         <textarea class="textArea"name="text" id="tweet-text"></textarea>

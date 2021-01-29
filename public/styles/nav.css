@@ -1,12 +1,19 @@
-nav {
+#nav { 
+    display:flex;
     height : 70px;
     width : 100%;
     color : #ffffff;
     background-color : #4056A1 ;
     padding : 1.5em;
-    position: fixed;
+    position: fixed;  
     
+
 }
 span {
     font-family: 'Bungee', cursive;
+}
+@media only screen and (min-width: 768px) {
+    #nav {
+        margin-bottom: 1em;
+    }
 }

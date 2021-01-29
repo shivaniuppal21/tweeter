@@ -14,7 +14,15 @@ h2{
     margin-top: 0;
 }
 
-.light{
+.light1{
     font-weight: lighter;
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+    body > header {
+        margin-top: 5em;
+        height : 350px;
+        width: 50%;  
+    }
 }

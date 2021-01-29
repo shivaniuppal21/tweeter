@@ -3,10 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
-
-
-
 const renderTweets = function(data) {
   // loops through tweets
   // calls createTweetElement for each tweet
@@ -36,7 +32,6 @@ const createTweetElement = function(tweet) {
     
       const timeDiff = Math.abs(dateToday.getTime() - dateCreated.getTime());
       const diffDays =  Math.ceil(timeDiff / (1000 * 3600 * 24));
-
     let $tweet = $("<article>").addClass("tweet");/* Your code for creating the tweet element */
   // ...
   let html = (`<header>
@@ -59,38 +54,28 @@ const createTweetElement = function(tweet) {
 
 const loadTweets = function () {
     // Make a request to the API and get the data back
-
     const url = `http://localhost:8080/tweets`
-
     $.ajax({
       url,
       method: 'GET',
     })
       .done((result) => {
         // success case. getting the result of the api
-        // this is the only block where you can access the result
         renderTweets(result);
-      })
+    })
       .fail(() =>
         console.log('There was an error getting the info for that show')
       )
       .always(() => console.log('Request is completed.'));
-  };
+    };
 
-
-  $(document).ready(function () {
+    $(document).ready(function () {
+    $('.errorMsg').hide();
       
     loadTweets();
 
 
     $("#tweet-form").on('submit', function (event) {
-
-        //$(".new-tweet").find("textarea").focus();
-
-    //event listener to toggle the new-tweetsection and enable the textarea
-        
-
-
      // prevent the default form submission
      event.preventDefault();
 
@@ -117,22 +102,17 @@ const loadTweets = function () {
         url,
         method: 'POST',
         data: content
-    }) .done((result) => {
-        
+    }) .done((result) => { 
         // success case. getting the result of the api
         // this is the only block where you can access the result
         loadTweets();
         $("#tweet-text").val("");
-        $(".errorMsg").slideUp( 500)
+        $(".errorMsg").slideUp(500)
     })
     .fail(() =>
         console.log('Error')
     )
     .always(() => console.log('Request is completed.'));
-
-    //hidden the message if it is shown, clear the textarea, and reset the char-counter
-    //
-    //searchBox.val("").focus();
     }
 });   
 loadTweets();
